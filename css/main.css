@@ -26,6 +26,9 @@ body {
 	/*flex-direction: column;*/ /*en el eje y de arriba a abajo*/
 	/*flex-direction: column-reverse;*/ /*en el eje y de abajo a arriba*/
 	height: 100vh;
+	/*flex-wrap: nowrap;*/ /*que viene por defecto*/
+	flex-wrap: wrap; /*para que sea autoajustable*/
+	/*flex-wrap: wrap-reverse;*/ /*va a hacerlo autoajus pero de la forma reversa*/
 }
 
 div[class*="item-"] {
@@ -33,7 +36,9 @@ div[class*="item-"] {
 	padding: 10px;
 	text-align: center;
 	border: 2px solid gray;
-	flex: 1; /*cuando aya espacio lo va a dividir de forma equitativa*/
+	flex-grow: 1; /*cuando aya espacio lo va a dividir de forma equitativa*/
+	width: 300px;
+	/*height: 50px;*/
 }
 
 /*div[class*="item-"]:nth-child(2) {
