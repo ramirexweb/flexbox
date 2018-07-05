@@ -1,0 +1,46 @@
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box; /*mantiene el componente size internamente*/
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: lighgray;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.contenedor {
+	border: 20px solid white;
+	display: flex;
+	/*flex-direction: row;*/ /*redundante*/
+	/*flex-direction: row-reverse;*/ /*en el eje x de derecha a izquierda*/
+	/*flex-direction: column;*/ /*en el eje y de arriba a abajo*/
+	/*flex-direction: column-reverse;*/ /*en el eje y de abajo a arriba*/
+	height: 100vh;
+}
+
+div[class*="item-"] {
+	background: orange;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid gray;
+	flex: 1; /*cuando aya espacio lo va a dividir de forma equitativa*/
+}
+
+/*div[class*="item-"]:nth-child(2) {
+	flex: 1.5;
+}*/
+
+div[class*="item-"]:nth-child(odd) {
+	background-color: black;
+	color: white;
+}
